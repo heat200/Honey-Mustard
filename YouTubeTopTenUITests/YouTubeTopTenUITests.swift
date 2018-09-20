@@ -38,7 +38,7 @@ class YouTubeTopTenUITests: XCTestCase {
         Thread.sleep(forTimeInterval: 1.5)
         app.tables.cells.firstMatch.tap()
         app.webViews/*@START_MENU_TOKEN@*/.buttons["Play"]/*[[".otherElements[\"YouTube video player\"]",".otherElements[\"YouTube Video Player\"].buttons[\"Play\"]",".buttons[\"Play\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        Thread.sleep(forTimeInterval: 12)
+        Thread.sleep(forTimeInterval: 20)
         app.tap()
         app.buttons["Play/Pause"].tap()
         app.buttons["Done"].tap()
@@ -56,7 +56,7 @@ class YouTubeTopTenUITests: XCTestCase {
         Thread.sleep(forTimeInterval: 2)
         app.tables.cells.firstMatch.tap()
         app.webViews/*@START_MENU_TOKEN@*/.buttons["Play"]/*[[".otherElements[\"YouTube video player\"]",".otherElements[\"YouTube Video Player\"].buttons[\"Play\"]",".buttons[\"Play\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        Thread.sleep(forTimeInterval: 12)
+        Thread.sleep(forTimeInterval: 20)
         app.tap()
         app.buttons["Play/Pause"].tap()
         app.buttons["Done"].tap()
@@ -71,14 +71,24 @@ class YouTubeTopTenUITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         Thread.sleep(forTimeInterval: 2)
         app.buttons["Show"].tap()
-        Thread.sleep(forTimeInterval: 8)
+        Thread.sleep(forTimeInterval: 3)
         app.tables.cells.firstMatch.tap()
         app.webViews/*@START_MENU_TOKEN@*/.buttons["Play"]/*[[".otherElements[\"YouTube video player\"]",".otherElements[\"YouTube Video Player\"].buttons[\"Play\"]",".buttons[\"Play\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        Thread.sleep(forTimeInterval: 12)
+        Thread.sleep(forTimeInterval: 20)
         app.tap()
         app.buttons["Play/Pause"].tap()
         app.buttons["Done"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).tap()
+    }
+    
+    func testNoResults() {
+        app.searchFields["Search"].tap()
+        app.typeText("Youth & Consequences")
+        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        Thread.sleep(forTimeInterval: 2)
+        app.buttons["Show"].tap()
+        Thread.sleep(forTimeInterval: 1.5)
+        app.buttons["OK"].tap()
     }
     
 }
