@@ -7,7 +7,25 @@
 		<key>YouTubeTopTen.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7DEC0B0F2150625300264990</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DEC0B232150625500264990</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DEC0B2E2150625500264990</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
